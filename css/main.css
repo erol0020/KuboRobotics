@@ -1,1 +1,51 @@
 @import url('imports/reset.css');
+@import url('imports/fonts.css');
+
+*{
+  box-sizing: border-box;
+}
+.main-wrapper{
+  background-color: #f1f3f2;
+}
+.main-header{
+  width: 100%;
+  height: 60px;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 1px 0 0 rgba(0,0,0,.25);
+}
+.main-header > .main-logo,
+.main-header > .main-logo img{
+  width: 110px;
+  height: auto;
+}
+.main-header > .main-nav ul,
+.main-header > .main-profile{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #044d7f;
+}
+.main-header > .main-nav ul a{
+  text-decoration: none;
+  color: inherit;
+  padding: 20px;
+}
+.main-header > .main-nav ul a:hover,
+.main-header > .main-profile:hover{
+  filter: opacity(.5);
+}
+.main-header > .main-profile{
+  text-decoration: none;
+  font-weight: bold;
+}
+.main-header > .main-profile::before{
+  font-family: 'Glyphicons Halflings';
+  content: "\e008";
+  margin-right: 5px;
+}
