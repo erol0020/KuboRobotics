@@ -1,9 +1,10 @@
+<?php require_once('code/navigation.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
   <!-- Title -->
-  <title>KEDU - The Educational Community and Curriculum Platform</title>
+  <title><?php echo getPages($_GET['page'], $navigation, true) ?> - The Educational Community and Curriculum Platform</title>
 
   <!-- Meta -->
   <meta charset="UTF-8">
@@ -27,9 +28,7 @@
       <ul>
         <li><a href="#">Dashboard</a></li>
         <li><a href="#">Lesson Plans</a></li>
-        <li><a href="?page=Documentation">Documentation</a></li>
-        <li><a href="?page=Educational-Materials">Educational Materials</a></li>
-        <li><a href="?page=Forum">Forum</a></li>
+        <?php getNavigation($_GET['page'], $navigation) ?>
       </ul>
     </nav><!--/.main-nav-->
 
@@ -37,6 +36,10 @@
       <span class="profile-icon"></span>Flemming Dibs
     </a>
   </header><!--/.main-header-->
+
+  <div class="main-container">
+    <?php getPages($_GET['page'], $navigation, false) ?>
+  </div>
 
 </body>
 </html>
