@@ -48,7 +48,8 @@
     }
   }
 
-  localStorage.setItem('threads', JSON.stringify(forumList));
+  //localStorage.setItem('threads', JSON.stringify(forumList));
+  forumList = JSON.parse(localStorage.getItem('threads'));
 
   // Function - get emoticon type
   function getType(id){

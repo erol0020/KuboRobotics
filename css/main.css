@@ -243,6 +243,9 @@
   font-size: 16px;
   line-height: 125%;
 }
+.forum-view-main > .content p{
+  margin-bottom: 30px;
+}
 .forum-view-main > .title{
   color: #044d7f;
   font-size: 30px;
