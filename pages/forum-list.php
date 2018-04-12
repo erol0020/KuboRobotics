@@ -69,6 +69,7 @@
     }
     return imageData[id];
   }
+
   // Function - get date string danish format
   function getDate(date){
     var string = new Date(date);
