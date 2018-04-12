@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <base href="http://localhost/KuboRobotics/">
 
   <!-- Title -->
   <title><?php echo getPages($_GET['page'], $navigation, true) ?> - The Educational Community and Curriculum Platform</title>

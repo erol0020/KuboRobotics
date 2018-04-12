@@ -8,7 +8,7 @@ if(empty($_GET['page'])){
 }
 
 $navigation = array(
-  'documentation'         => 'Documentation',
+  'documentation'         => 'Support',
   'educational-materials' => 'Educational Materials',
   'forum'                 => 'Forum'
 );
