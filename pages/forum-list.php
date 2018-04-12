@@ -33,7 +33,7 @@
       'content'  : 'Aenean massa leo, suscipit in posuere id, elementum eu dolor. Fusce vitae metus ac est suscipit condimentum non eget orci. Ut maximus tortor quis eros lacinia, ut condimentum urna porttitor. Aliquam faucibus ante non libero volutpat aliquet. Proin a ex elit. Nunc cursus tristique gravida. Quisque iaculis leo a eleifend interdum.',
       'date'     : '2018-04-05 14:26',
       'emoticon' : 2,
-      'avatar'   : 'flemmingdibs.png',
+      'avatar'   : 'flemmingdibs.jpg',
       'name'     : 'Flemming Dibs',
       'school'   : 'Rosenvængets Skole'
     },

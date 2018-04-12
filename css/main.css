@@ -168,3 +168,90 @@
   font-family: 'Lato', sans-serif;
   line-height: 125%;
 }
+/* - Forum view - */
+.forum-view-container{
+  width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.forum-view-container > .forum-view-content{
+  width: 75%;
+  margin-right: 5px;
+}
+.forum-view-container > .forum-view-profile{
+  width: 25%;
+  margin-left: 5px;
+}
+.forum-view-content > .forum-view-main,
+.forum-view-content > .forum-content-author,
+.forum-view-container > .forum-view-profile,
+.forum-content-username,
+.forum-view-profile{
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 1px 0 0 rgba(0,0,0,.25);
+}
+.forum-view-content{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.forum-content-author{
+  position: relative;
+  margin-left: 5px;
+}
+.forum-content-username{
+  margin-bottom: 10px;
+  position: relative;
+}
+.forum-content-username > img{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.forum-content-username > section{
+  margin-left: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 44px;
+}
+.forum-content-username > section > .title,
+.forum-content-username > section > .subtitle,
+.forum-view-main > .title,
+.forum-view-main > .subtitle,
+.forum-view-main > .content{
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+}
+.forum-content-username > section > .title{
+  color: #044d7f;
+  margin-right: 20px;
+}
+.forum-content-username > section > .subtitle,
+.forum-view-main > .subtitle{
+  color: #ccc;
+}
+.forum-view-main > .title,
+.forum-view-main > .subtitle{
+  margin-bottom: 20px;
+}
+.forum-view-main > .content{
+  color: #444;
+  font-size: 16px;
+  line-height: 150%;
+}
+.forum-view-main > .title{
+  color: #044d7f;
+  font-size: 30px;
+}
+.forum-view-main > .subtitle{
+  font-size: 12px;
+  display: block;
+}
+.forum-view-profile img{
+  box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.25), -1px -1px 0 0 rgba(0,0,0,.25);
+  width: 100%;
+  height: auto;
+}
