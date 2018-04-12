@@ -200,6 +200,7 @@
 .forum-content-author{
   position: relative;
   margin-left: 5px;
+  width: 25%;
 }
 .forum-content-username{
   margin-bottom: 10px;
@@ -240,7 +241,7 @@
 .forum-view-main > .content{
   color: #444;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 125%;
 }
 .forum-view-main > .title{
   color: #044d7f;

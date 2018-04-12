@@ -48,6 +48,8 @@
     }
   }
 
+  localStorage.setItem('threads', JSON.stringify(forumList));
+
   // Function - get emoticon type
   function getType(id){
     var imageData = {
