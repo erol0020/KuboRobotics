@@ -1,28 +1,6 @@
 <main class="main-content">
   <h1 class="title">Forum <a href="forum/new">Ny oplæg</a></h1>
   <ul id="list-target" class="forum-list">
-    <!--<li>
-
-      <div class="forum-emoticon">
-        <img class="forun-emoticon-icon" src="img/emoticons/sad.png" alt="Type Sad">
-      </div>
-
-      <div class="forum-title">
-        <a href="#">HJÆLP! Jeg kan ikke finde ud af det!</a>
-        <time datetime="2018-04-05 14:26">05/04-2018 - 14:26</time>
-      </div>
-
-      <div class="forum-member">
-        <figure class="forum-avatar">
-          <img src="img/avatar/flemmingdibs.png" alt="Flemming Dibs">
-        </figure>
-        <div class="forum-author">
-          <p class="name">Flemming Dibs</p>
-          <p class="school">Rosenvængets Skole</p>
-        </div>
-      </div>
-
-    </li>-->
   </ul><!--/.forum-list-->
 </main>
 
@@ -31,7 +9,7 @@
     1 : {
       'title'    : 'HJÆLP! Jeg kan ikke finde ud af det',
       'content'  : 'Aenean massa leo, suscipit in posuere id, elementum eu dolor. Fusce vitae metus ac est suscipit condimentum non eget orci. Ut maximus tortor quis eros lacinia, ut condimentum urna porttitor. Aliquam faucibus ante non libero volutpat aliquet. Proin a ex elit. Nunc cursus tristique gravida. Quisque iaculis leo a eleifend interdum.',
-      'date'     : '2018-04-05 14:26',
+      'date'     : '2018-04-02 14:26',
       'emoticon' : 2,
       'avatar'   : 'flemmingdibs.jpg',
       'name'     : 'Flemming Dibs',
@@ -40,11 +18,20 @@
     2 : {
       'title'    : 'Jeg har nogle spørgsmål, jeg gerne vil stille jer',
       'content'  : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus mi, egestas vitae consectetur non, rhoncus non neque. Etiam tortor risus, tempor pellentesque malesuada nec, facilisis ac mi. Ut eu condimentum ante. Nulla finibus, lacus feugiat luctus viverra, arcu quam scelerisque mi, eget convallis lacus nisi sit amet risus. Fusce ultrices sodales hendrerit. Morbi blandit maximus libero, a accumsan erat tempor non. In eleifend sodales pretium. Duis sed sodales enim. Pellentesque aliquam ex eget neque hendrerit, quis facilisis sem molestie. Praesent quam ligula, porta vitae pretium quis, dapibus ut leo. Donec sed auctor massa.',
-      'date'     : '2018-04-02 16:16',
+      'date'     : '2018-04-06 16:16',
       'emoticon' : 1,
       'avatar'   : 'jyttesteenphilipsen.jpg',
       'name'     : 'Jytte Steen Philipsen',
       'school'   : 'Nordre Skole'
+    },
+    3 : {
+      'title'    : 'Hej alle sammen!',
+      'content'  : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus mi, egestas vitae consectetur non, rhoncus non neque. Etiam tortor risus, tempor pellentesque malesuada nec, facilisis ac mi. Ut eu condimentum ante. Nulla finibus, lacus feugiat luctus viverra, arcu quam scelerisque mi, eget convallis lacus nisi sit amet risus. Fusce ultrices sodales hendrerit. Morbi blandit maximus libero, a accumsan erat tempor non. In eleifend sodales pretium. Duis sed sodales enim. Pellentesque aliquam ex eget neque hendrerit, quis facilisis sem molestie. Praesent quam ligula, porta vitae pretium quis, dapibus ut leo. Donec sed auctor massa.',
+      'date'     : '2018-04-10 16:16',
+      'emoticon' : 1,
+      'avatar'   : 'ullapedersen.jpg',
+      'name'     : 'Ulla Pedersen',
+      'school'   : 'Rosenvængets Skole'
     }
   }
 

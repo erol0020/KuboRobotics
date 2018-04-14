@@ -1,6 +1,6 @@
 <div id="<?php echo $id ?>" class="forum-view-container">
   <div class="forum-view-content">
-    <main class="forum-view-main">
+    <main class="forum-view-main" id="append-after">
       <h1 id="view-title" class="title">Title</h1>
       <time id="view-date" class="subtitle" datetime="2018-04-12">01/01-2000 - 00:00</time>
 
@@ -10,6 +10,34 @@
         </p>
       </div>
     </main>
+
+<!--
+    <div class="forum-comment">
+      <div class="forum-comment-main">
+        <p>The comment</p>
+      </div>
+
+      <figure class="forum-comment-user">
+        <figcaption>Flemming Dibs</figcaption>
+        <img src="img/avatar/flemmingdibs.jpg" alt="Flemming Dibs">
+      </figure>
+    </div>
+-->
+
+    <section class="forum-comment-container">
+      <h2 class="title">
+        Opret kommentar
+        <span>
+          Flemming Dibs
+          <img src="img/avatar/flemmingdibs.jpg" alt="Flemming Dibs">
+        </span>
+      </h2>
+      <form id="target-form" action="index.php" method="post">
+        <textarea id="target-textarea" class="comment-textarea" name="post-comment"></textarea>
+        <input type="submit" class="post-submit" value="Opret kommentar">
+      </form>
+    </section><!--/.forum-comment-container-->
+
   </div><!--/.forum-view-content-->
 
 
@@ -61,6 +89,7 @@
     return imageData[id];
   }
 
+  // Fetch data from array
   for(var key in list){
     if(key === id){
       var date = getDate(list[id]['date']);
@@ -87,4 +116,82 @@
       document.getElementById('view-avatar').setAttribute('alt', list[id]['name']);
     }
   }
+
+  // Fetch comments from array
+  var comments = JSON.parse(localStorage.getItem('comments'));
+/*
+  comments = {
+    1 : {
+      'name'    : 'Flemming Dibs',
+      'avatar'  : 'flemmingdibs.jpg',
+      'target'  : 4,
+      'comment' : '<p>Hue hue hue!</p>'
+    },
+    2 : {
+      'name'    : 'Jytte Steen Philipsen',
+      'avatar'  : 'jyttesteenphilipsen.jpg',
+      'target'  : 4,
+      'comment' : '<p>Haa Haa Haa!</p>'
+    }
+  }
+*/
+  if(comments != null){
+    var referenceNode = document.querySelector('#append-after');
+    var output = '<div class="the-comments">';
+
+    for(var key in comments){
+      if(id == comments[key]['target']){
+
+        output  += '<div class="forum-comment">';
+          output += '<div class="forum-comment-main">';
+            output += '<p>' + comments[key]['comment'] + '</p>';
+          output += '</div>';
+
+          output += '<figure class="forum-comment-user">';
+            output += '<figcaption>' + comments[key]['name'] + '</figcaption>';
+            output += '<img src="img/avatar/' + comments[key]['avatar'] + '" alt="Flemming Dibs">';
+          output += '</figure>';
+        output += '</div>';
+      }
+    }
+
+    output += '</div>';
+    referenceNode.insertAdjacentHTML("afterend", output);
+  }
+
+  // Create comment script
+  document.getElementById('target-form').addEventListener('submit', function(event){
+    event.preventDefault();
+
+    var content = document.getElementById('target-textarea').value;
+        content = '<p>' + content.replace(/\n/g, "</p>\n<p>") + '</p>';
+        content = content.replace('<p></p>', '');
+
+    if(comments == null){
+      comments = {
+        1 : {
+          'name'    : 'Flemming Dibs',
+          'avatar'  : 'flemmingdibs.jpg',
+          'target'  : id,
+          'comment' : content
+        }
+      }
+
+    } else {
+
+      for(var key in comments){
+        var newId = (parseInt(key) + 1);
+      }
+
+      comments[newId] = {
+        'name'    : 'Flemming Dibs',
+        'avatar'  : 'flemmingdibs.jpg',
+        'target'  : parseInt(id),
+        'comment' : content
+      }
+    }
+
+    localStorage.setItem('comments', JSON.stringify(comments));
+    location.reload();
+  });
 </script>
