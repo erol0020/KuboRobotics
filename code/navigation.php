@@ -8,8 +8,8 @@ if(empty($_GET['page'])){
 }
 
 $navigation = array(
-  'documentation'         => 'Support',
-  'educational-materials' => 'Educational Materials',
+  'lesson-plans'          => 'Lesson Plans',
+  'support'               => 'Support',
   'forum'                 => 'Forum'
 );
 

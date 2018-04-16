@@ -28,7 +28,6 @@
     <nav class="main-nav">
       <ul>
         <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Lesson Plans</a></li>
         <?php getNavigation($_GET['page'], $navigation) ?>
       </ul>
     </nav><!--/.main-nav-->
