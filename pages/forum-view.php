@@ -11,19 +11,6 @@
       </div>
     </main>
 
-<!--
-    <div class="forum-comment">
-      <div class="forum-comment-main">
-        <p>The comment</p>
-      </div>
-
-      <figure class="forum-comment-user">
-        <figcaption>Flemming Dibs</figcaption>
-        <img src="img/avatar/flemmingdibs.jpg" alt="Flemming Dibs">
-      </figure>
-    </div>
--->
-
     <section class="forum-comment-container">
       <h2 class="title">
         Opret kommentar
@@ -119,22 +106,7 @@
 
   // Fetch comments from array
   var comments = JSON.parse(localStorage.getItem('comments'));
-/*
-  comments = {
-    1 : {
-      'name'    : 'Flemming Dibs',
-      'avatar'  : 'flemmingdibs.jpg',
-      'target'  : 4,
-      'comment' : '<p>Hue hue hue!</p>'
-    },
-    2 : {
-      'name'    : 'Jytte Steen Philipsen',
-      'avatar'  : 'jyttesteenphilipsen.jpg',
-      'target'  : 4,
-      'comment' : '<p>Haa Haa Haa!</p>'
-    }
-  }
-*/
+
   if(comments != null){
     var referenceNode = document.querySelector('#append-after');
     var output = '<div class="the-comments">';
@@ -164,34 +136,39 @@
     event.preventDefault();
 
     var content = document.getElementById('target-textarea').value;
-        content = '<p>' + content.replace(/\n/g, "</p>\n<p>") + '</p>';
-        content = content.replace('<p></p>', '');
 
-    if(comments == null){
-      comments = {
-        1 : {
+    if(content == ''){
+      alert('Du kan ikke oprette en tom kommentar!');
+    } else {
+      content = '<p>' + content.replace(/\n/g, "</p>\n<p>") + '</p>';
+      content = content.replace('<p></p>', '');
+
+      if(comments == null){
+        comments = {
+          1 : {
+            'name'    : 'Flemming Dibs',
+            'avatar'  : 'flemmingdibs.jpg',
+            'target'  : id,
+            'comment' : content
+          }
+        }
+
+      } else {
+
+        for(var key in comments){
+          var newId = (parseInt(key) + 1);
+        }
+
+        comments[newId] = {
           'name'    : 'Flemming Dibs',
           'avatar'  : 'flemmingdibs.jpg',
-          'target'  : id,
+          'target'  : parseInt(id),
           'comment' : content
         }
       }
 
-    } else {
-
-      for(var key in comments){
-        var newId = (parseInt(key) + 1);
-      }
-
-      comments[newId] = {
-        'name'    : 'Flemming Dibs',
-        'avatar'  : 'flemmingdibs.jpg',
-        'target'  : parseInt(id),
-        'comment' : content
-      }
+      localStorage.setItem('comments', JSON.stringify(comments));
+      location.reload();
     }
-
-    localStorage.setItem('comments', JSON.stringify(comments));
-    location.reload();
   });
 </script>
